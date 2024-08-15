@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/button_tabel"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/card"
+            android:textStyle="bold"
+            android:text="Tabel" />
+
+        <Button
+            android:id="@+id/button_grafik"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/card"
+            android:textStyle="bold"
+            android:text="Grafik" />
+    </LinearLayout>
+
+    <com.trengginas.fragment.CustomWebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:scrollbars="vertical" />
+</LinearLayout>

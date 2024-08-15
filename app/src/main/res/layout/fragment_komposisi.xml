@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_top_corner">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="0dp"
+            android:background="@drawable/full_rounded">
+
+            <ImageView
+                android:id="@+id/icon_level"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_table"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"/>
+
+            <Spinner
+                android:id="@+id/spinner_level"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_toEndOf="@id/icon_level"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingEnd="20dp"
+                android:layout_weight="1"
+                android:hint="Pilih Level"
+                android:prompt="@string/select_level" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_kecamatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="0dp"
+            android:background="@drawable/full_rounded">
+
+            <ImageView
+                android:id="@+id/icon_kecamatan"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_kecamatan"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"/>
+
+            <Spinner
+                android:id="@+id/spinner_kecamatan"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_toEndOf="@id/icon_kecamatan"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingEnd="20dp"
+                android:layout_weight="1"
+                android:hint="Pilih Kecamatan"
+                android:prompt="@string/select_kecamatan" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="0dp"
+            android:background="@drawable/full_rounded">
+
+            <ImageView
+                android:id="@+id/icon_tahun"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_date"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"/>
+
+            <Spinner
+                android:id="@+id/spinner_tahun"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_toEndOf="@id/icon_tahun"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingEnd="20dp"
+                android:layout_weight="1"
+                android:hint="Pilih Tahun"
+                android:prompt="@string/select_year" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="0dp"
+            android:background="@drawable/full_rounded">
+
+            <ImageView
+                android:id="@+id/icon_satuan"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_unit"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"/>
+
+            <Spinner
+                android:id="@+id/spinner_satuan"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_toEndOf="@id/icon_satuan"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingEnd="20dp"
+                android:layout_weight="1"
+                android:hint="Pilih Satuan"
+                android:prompt="@string/select_unit" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/button_tabel"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/card"
+            android:textStyle="bold"
+            android:text="Tabel" />
+
+        <Button
+            android:id="@+id/button_grafik"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/card"
+            android:textStyle="bold"
+            android:text="Grafik" />
+    </LinearLayout>
+
+    <com.trengginas.fragment.CustomWebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

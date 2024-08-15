@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="0dp"
+        android:background="@drawable/full_rounded"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/icon_kec"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_kecamatan"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_kec"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_toEndOf="@id/icon_kec"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingEnd="20dp"
+            android:layout_weight="1"
+            android:hint="Pilih Kecamatan"
+            android:prompt="@string/select_level" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="0dp"
+        android:background="@drawable/full_rounded"
+        android:layout_marginTop="1dp">
+
+        <ImageView
+            android:id="@+id/icon_desa"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_table"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_desa"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_toEndOf="@id/icon_desa"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingEnd="20dp"
+            android:layout_weight="1"
+            android:hint="Pilih Desa/Kelurahan"
+            android:prompt="@string/select_level" />
+    </RelativeLayout>
+
+    <com.trengginas.fragment.CustomWebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:scrollbars="vertical" />
+</LinearLayout>

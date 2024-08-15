@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nonet"
+    tools:context=".activity.NetworkCheckActivity">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:src="@drawable/ic_nonet"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@id/text_view"/>
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="No network connection. Please check your connection and try again."
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_regular"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/retry_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retry"
+        android:background="@drawable/rounded_white"
+        android:layout_below="@id/text_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+</RelativeLayout>

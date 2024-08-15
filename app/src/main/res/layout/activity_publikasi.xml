@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PublikasiActivity">
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_publikasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateTint="@color/blue" /> <!-- Set the color of the loader to blue -->
+
+    <TextView
+        android:id="@+id/loading_publikasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress_publikasi"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Sedang Memuat"
+        android:textColor="@color/blue"
+        android:visibility="gone" /> <!-- Initially hidden -->
+</RelativeLayout>

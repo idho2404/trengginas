@@ -1,0 +1,131 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/card"
+    android:gravity="center">
+
+    <!-- Top Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="237dp"
+            android:layout_height="232dp"
+            android:contentDescription="logo_desc"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/appNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+
+            android:textColor="@color/black"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/mottoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Horizontal ProgressBar with percentage -->
+        <LinearLayout
+            android:layout_width="269dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/progressPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:progressDrawable="@drawable/progress_bar_horizontal"
+                android:indeterminate="false"
+                android:max="100"
+                android:minHeight="5dp"
+                android:maxHeight="5dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Bottom Section -->
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:orientation="vertical"
+        android:background="@drawable/base_background"
+        android:gravity="center"
+        android:alpha="0"> <!-- Start with alpha 0 for fade-in effect -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Powered by"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="4dp">
+
+            <ImageView
+                android:id="@+id/logoBpsImageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/logo_bps" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BADAN PUSAT STATISTIK"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KABUPATEN TRENGGALEK"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
